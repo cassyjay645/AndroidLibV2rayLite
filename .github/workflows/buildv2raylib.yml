@@ -24,7 +24,14 @@ jobs:
     - name: setupomobile
       run: go install golang.org/x/mobile/cmd/gomobile@latest
        
-    - name: make build
-      run: make
+    - name: make deps
+      run: make all
+    - name: ls ar
+      run: ls -R
+    
+    - name: make build mobi
+      run: make BuildMobile
+    - name: lsdirp
+      run: ls -R
     
       
