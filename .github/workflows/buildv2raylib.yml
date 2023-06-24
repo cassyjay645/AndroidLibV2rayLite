@@ -4,11 +4,8 @@
 name: build libv2ray
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+  workflow_dispatch:
+    
 jobs:
 
   build:
@@ -26,7 +23,8 @@ jobs:
         
     - name: setupomobile
       run: go install golang.org/x/mobile/cmd/gomobile@latest
-      
-    - name: test
-      run: go version
+       
+    - name: make build
+      run: make
+    
       
