@@ -15,6 +15,7 @@ jobs:
     - uses: nttld/setup-ndk@v1
       with:
         ndk-version: r25b
+        local-cache: true
 
     - name: Set up Go
       uses: actions/setup-go@v3
