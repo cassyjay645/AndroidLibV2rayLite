@@ -27,14 +27,19 @@ jobs:
     - name: g init
       run: gomobile init
       
-    - name: make deps
-      run: make all
-    - name: ls ar
-      run: ls -R
+    #- name: make deps
+    #  run: make all
+    #- name: ls ar
+    #  run: ls -R
     
     - name: make build mobi
       run: make BuildMobile
     - name: lsdirp
       run: ls -R
-    
+
+    #- name: Upload APK
+    #  uses: actions/upload-artifact@v4
+    #  with:
+    #    name: apk
+    #    path: $
       
