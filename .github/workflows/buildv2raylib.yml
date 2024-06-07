@@ -36,5 +36,10 @@ jobs:
       run: make BuildMobile
     - name: lsdirp
       run: ls -R
-    
+
+    #- name: Upload APK
+    #  uses: actions/upload-artifact@v4
+    #  with:
+    #    name: apk
+    #    path: $
       
