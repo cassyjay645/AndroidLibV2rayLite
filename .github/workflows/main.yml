@@ -49,9 +49,18 @@ jobs:
          gomobile init
          go mod tidy
          gomobile bind -v -androidapi 19 -ldflags='-s -w' ./
-    - name: Upload AndroidLibV2rayLite to release
-      uses: svenstaro/upload-release-action@v2
+
+    - name: lsd
+      run: ls -R
+      
+    - name: upload artifacts
+      uses: actions/upload-artifact@v4
       with:
-        file: ./libv2ray*r
-        tag: ${{ github.event.inputs.release_tag }}
-        file_glob: true
+        file: cat
+        path: ${{github.workspace}}/libv2ray/
+    #- name: Upload AndroidLibV2rayLite to release
+    #  uses: svenstaro/upload-release-action@v2
+    #  with:
+    #    file: ./libv2ray*r
+    #    tag: ${{ github.event.inputs.release_tag }}
+    #    file_glob: true
