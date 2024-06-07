@@ -27,10 +27,10 @@ jobs:
     - name: g init
       run: gomobile init
       
-    - name: make deps
-      run: make all
-    - name: ls ar
-      run: ls -R
+    #- name: make deps
+    #  run: make all
+    #- name: ls ar
+    #  run: ls -R
     
     - name: make build mobi
       run: make BuildMobile
