@@ -25,6 +25,7 @@ downloadGoMobile:
 
 BuildMobile:
 	gomobile init
+        go mod tidy
 	gomobile bind -v -androidapi 19 -ldflags='-s -w' github.com/cassyjay645/AndroidLibV2rayLite
 
 all: asset pb fetchDep
