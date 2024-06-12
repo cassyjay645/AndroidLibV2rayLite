@@ -50,6 +50,7 @@ jobs:
     - name: Upload AndroidLibV2rayLite to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: ./libv2ray*r
+        name: libv2ray.aar
+        path: ./libv2ray.aar
         tag: ${{ github.event.inputs.release_tag }}
         file_glob: true
